@@ -1,0 +1,91 @@
+\documentclass[
+11pt, paper=a4,  listof=totocnumbered, % lists are also included in table of contents
+numbers=noendperiod, % Don't add a period at the end of a chapter number
+]{scrreprt}
+
+% ===============================
+% IUBH Template für Seminar-, Bachelor-, and Master-works
+% -------------------------------
+% Authors; Ralf Kneuper, Jörg Sawatzki
+% Maintainer: Paul Libbrecht
+
+\usepackage{txfonts} % Use a Times-new-roman open-source clone
+
+\usepackage{caption}
+\usepackage{float}
+
+\setkomafont{chapter}{\Large} 
+\setkomafont{section}{\large}
+\setkomafont{subsection}{\large} 
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry} % margins
+\addtolength{\footskip}{-0.7cm}% foot larger by 0,7 cm  (Raises the page number)
+
+
+\usepackage[onehalfspacing]{setspace} % line space 1,5
+
+\setlength{\parindent}{6pt} % Indent at start of paragraphs  6pt
+
+\usepackage[utf8]{inputenc} %UTF-8 to encode many characters => for many characters, you can just input the character and avoid a macro
+
+\usepackage[english]{babel} % english hyphenations
+%\usepackage[T1]{fontenc} %wichtig für Trennung von Wörtern mit Umlauten
+\usepackage{microtype} % align margins
+
+\usepackage{graphicx} % import graphics
+\usepackage{placeins}% places the graphics within text
+
+% Abbreviation's directory
+% printonlyused - only if used
+% withpage - the first occurrence's page number is listed too
+\usepackage[withpage]{acronym}
+
+\usepackage[hidelinks]{hyperref} %https://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks
+
+\begin{document}
+
+\include{001-Titlepage}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\pagestyle{plain}
+
+\pagenumbering{Roman} %the intro is counted with roman numbers
+\setcounter{page}{2} %starting with page 2 (page 1 is the titel)
+
+% --- too detailed for a seminar but otherwise useful
+%\include{002-BlockingNotice}
+%\include{003-Acknowledgements}
+%\include{004-Abstract}
+
+\tableofcontents %table of contents
+\listoffigures %List of figures
+\listoftables %list of tables
+
+\include{005-Abbreviations}
+
+\renewcommand{\thechapter}{\arabic{chapter}} %Count chapters with arabic numbers and not roman numbers
+\setcounter{chapter}{0} %Reset chapter counter
+\pagenumbering{arabic}
+
+%\include{010-Intro}
+\include{020-Body}
+%\include{030-Conclusion}
+
+\appendix 
+
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 
+% References will then be sorted and formatted in the correct style.
+%
+ \bibliographystyle{alpha}
+ \bibliography{biblio}
+
+%\printbibliography[heading=none]
+
+%\include{041-Annexes}
+%\include{042-Glossary}
+\include{Pledge}
+
+\end{document}

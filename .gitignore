@@ -1,3 +1,16 @@
+# LaTeX "side" outputs
+*.aux
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.bbl
+
+## mac specific
+.DS_Store
+
+
 # Logs
 logs
 *.log
