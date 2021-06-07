@@ -9,6 +9,10 @@ numbers=noendperiod, % Don't add a period at the end of a chapter number
 % Authors; Ralf Kneuper, Jörg Sawatzki
 % Maintainer: Paul Libbrecht
 
+% Fix of Warning: Class scrreprt Warning: \float@addtolists detected!
+% https://komascript.de/faq_float%40addtolist
+\usepackage{scrhack}
+
 \usepackage{txfonts} % Use a Times-new-roman open-source clone
 
 \usepackage{caption}
@@ -86,6 +90,6 @@ numbers=noendperiod, % Don't add a period at the end of a chapter number
 
 %\include{041-Annexes}
 %\include{042-Glossary}
-\include{Pledge}
+\include{070-Pledge}
 
 \end{document}
