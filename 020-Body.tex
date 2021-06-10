@@ -73,3 +73,22 @@ Notice that formulæ that are centered start bigger (technically, they start in 
 Formulæ can be given a number and a label. Numbering happens automatically with \verb+\begin{equation}+ and \verb+\end{equation}+ and can be avoided if enclosing the formula betwee \verb+\[+ and \verb+\]+. If using the \verb+\label+ macro inside, you can refer automatically to this equation using \verb+\ref{label}+. E.g. Thanks to equation~\ref{arctanderivative} one dare say that:
 
 \begin{equation} \int_0^t \frac{1}{1+x^2} dx = \mbox{arctan}(t) \end{equation}
+
+
+\section{Tools and Code}
+
+Many users of this template will want to include some code.
+
+The simplest way to do so is to use the \verb+\verb+ macro which is followed by a sign, then some code, then the sign again to close. This is the inline version which works as in: 
+
+\begin{verbatim}
+As we could calculate with \cite{Wolfram_alpha} using 
+\verb_integrate 1 / pi e ^ (t/pi) from zero to infinity_.
+\end{verbatim}
+
+which yields: 
+
+As we could calculate with \cite{Wolfram_alpha} using \verb_integrate 1 / pi e ^ (t/pi)_ from zero to infinity.
+
+
+The multiline version of this is called \verb+\begin{verbatim}+ and finishes with \verb+\end{verbatim}+.
