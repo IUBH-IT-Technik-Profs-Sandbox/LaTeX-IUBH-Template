@@ -13,6 +13,12 @@ numbers=noendperiod, % Don't add a period at the end of a chapter number
 % https://komascript.de/faq_float%40addtolist
 \usepackage{scrhack}
 
+% get custom bibliography style working without prepending [brackets]
+\usepackage{natbib}
+
+% breaks line at hyphens (resolves formatting issues in bibliography)
+\usepackage[hyphens]{url}
+
 \usepackage{txfonts} % Use a Times-new-roman open-source clone
 
 \usepackage{caption}
@@ -83,8 +89,9 @@ numbers=noendperiod, % Don't add a period at the end of a chapter number
 % BibTeX users should specify bibliography style 
 % References will then be sorted and formatted in the correct style.
 %
- \bibliographystyle{alpha}
- \bibliography{biblio}
+ %\bibliographystyle{alpha}
+\bibliographystyle{iubh}
+\bibliography{biblio}
 
 %\printbibliography[heading=none]
 
