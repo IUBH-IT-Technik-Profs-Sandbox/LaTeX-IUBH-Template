@@ -81,14 +81,24 @@ Many users of this template will want to include some code.
 
 The simplest way to do so is to use the \verb+\verb+ macro which is followed by a sign, then some code, then the sign again to close. This is the inline version which works as in: 
 
+
 \begin{verbatim}
 As we could calculate with \cite{Wolfram_alpha} using 
 \verb_integrate 1 / pi e ^ (t/pi) from zero to infinity_.
 \end{verbatim}
 
-which yields: \cite{con:infra} \cite{sammelband} \cite{article1}
+which yields: 
 
 As we could calculate with \cite{Wolfram_alpha} using \verb_integrate 1 / pi e ^ (t/pi)_ from zero to infinity.
 
 
 The multiline version of this is called \verb+\begin{verbatim}+ and finishes with \verb+\end{verbatim}+.
+
+
+\section{Citation examples}
+
+Monography \citep[][S. 22]{con:infra} 
+
+Collection \citep{sammelband} 
+
+Article \citep{article1}
