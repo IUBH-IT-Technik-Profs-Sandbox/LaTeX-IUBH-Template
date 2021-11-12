@@ -3,6 +3,11 @@
 numbers=noendperiod, % Don't add a period at the end of a chapter number
 ]{scrreprt}
 
+    \usepackage{chngcntr}
+    \counterwithout{footnote}{chapter}
+    \counterwithout{figure}{chapter}
+        \counterwithout{table}{chapter}
+    
 % ===============================
 % IUBH Template für Seminar-, Bachelor-, and Master-works
 % -------------------------------
