@@ -12,7 +12,7 @@ A vector graphic is one where strokes remain strokes even at the highest resolut
 Many tools generate vector-graphics for plots from any data-set. E.g. Plotly (with the use of the Browser-Print), MatPlotLib or even OpenOffice, LibreOffice or MS-Excel.
 
 \section{Literature References}
-Here is an example of a reference with a page-number: \cite[S. 6]{DueckKo:2016}
+Here is an example of a reference with a page-number: \textcite[p.~6]{DueckKo:2016}
 
 
 \section{Pictures}
@@ -20,7 +20,7 @@ Here is an example of a reference with a page-number: \cite[S. 6]{DueckKo:2016}
 \begin{figure}[h]
 \centering
 \includegraphics[width=8cm]{pics/spiral.pdf}
-\caption{A spiral... smooth vector-based with a clean parametrisation! \\ Nothing to do with \cite{Gage:18}}\label{fig:spiral}
+\caption{A spiral... smooth vector-based with a clean parametrisation! \\ Nothing to do with \textcite{Gage:18}}\label{fig:spiral}
 \end{figure}
 \FloatBarrier
 
@@ -41,7 +41,7 @@ Bush & Gardener & Nature-sculptor \\
 Painting & Painter & Interior Design \\
  &  & \\
 \end{tabular}
-\caption[Downgrade and upgrade of job denominations]{Downgrade and Upgrade of job denominations \\ \ \ \ \cite{DueckKo:2016}}
+\caption[Downgrade and upgrade of job denominations]{Downgrade and Upgrade of job denominations \\ \ \ \ \textcite{DueckKo:2016}}
 \label{tab:Downgrade and Upgrade of job denominations}
 \end{table} 
 
@@ -70,7 +70,7 @@ A formula can be written inline, e.g. as $ \frac{d}{dx}\mbox{arctg}(x) = \frac{1
 
 Notice that formulæ that are centered start bigger (technically, they start in \verb+\displaystyle+) than they start inline (technically, they start in \verb+\textstyle+ all subsequents reductions, e.g. an exponent, goes to \verb+\scriptstyle+ then \verb+\scriptscriptstyle+). Indeed a best effort is made so that inline formulæ do not change the line height which would bother the eye of a reader.
 
-Formulæ can be given a number and a label. Numbering happens automatically with \verb+\begin{equation}+ and \verb+\end{equation}+ and can be avoided if enclosing the formula betwee \verb+\[+ and \verb+\]+. If using the \verb+\label+ macro inside, you can refer automatically to this equation using \verb+\ref{label}+. E.g. Thanks to equation~\ref{arctanderivative} one dare say that:
+Formulæ can be given a number and a label. Numbering happens automatically with \verb+\begin{equation}+ and \verb+\end{equation}+ and can be avoided if enclosing the formula between \verb+\[+ and \verb+\]+. If using the \verb+\label+ macro inside, you can refer automatically to this equation using \verb+\ref{label}+. E.g. Thanks to equation~\ref{arctanderivative} one dare say that:
 
 \begin{equation} \int_0^t \frac{1}{1+x^2} dx = \mbox{arctan}(t) \end{equation}
 
@@ -83,13 +83,13 @@ The simplest way to do so is to use the \verb+\verb+ macro which is followed by 
 
 
 \begin{verbatim}
-As we could calculate with \cite{Wolfram_alpha} using 
+As we could calculate with \textcite{Wolfram_Alpha} using 
 \verb_integrate 1 / pi e ^ (t/pi) from zero to infinity_.
 \end{verbatim}
 
 which yields: 
 
-As we could calculate with \cite{Wolfram_alpha} using \verb_integrate 1 / pi e ^ (t/pi)_ from zero to infinity.
+As we could calculate with \textcite{Wolfram_Alpha} using \verb_integrate 1 / pi e ^ (t/pi)_ from zero to infinity.
 
 
 The multiline version of this is called \verb+\begin{verbatim}+ and finishes with \verb+\end{verbatim}+.
@@ -97,8 +97,8 @@ The multiline version of this is called \verb+\begin{verbatim}+ and finishes wit
 
 \section{Citation examples}
 
-Monography \citep[][S. 22]{con:infra} 
+Monography \parencite[p.~22]{con:infra} 
 
-Collection \citep{sammelband} 
+Collection \parencite{sammelband} 
 
-Article \citep{article1}
+Article \parencite{article1}
