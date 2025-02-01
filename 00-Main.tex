@@ -19,11 +19,13 @@ numbers=noendperiod, % Don't add a period at the end of a chapter number
 \usepackage{scrhack}
 
 % get custom bibliography style working without prepending [brackets]
-\usepackage{natbib}
-\setcitestyle{aysep={}} % remove comma as delimiter 
+%\usepackage{natbib}
+%\setcitestyle{aysep={}} % remove comma as delimiter 
+\usepackage[style=apa, backend=biber]{biblatex} % Load biblatex with APA style
+\addbibresource{biblio.bib} % Point to your .bib file
 
 % breaks line at hyphens (resolves formatting issues in bibliography)
-\usepackage[hyphens]{url}
+% \usepackage[hyphens]{url}
 
 \usepackage{txfonts} % Use a Times-new-roman open-source clone
 
@@ -100,10 +102,11 @@ numbers=noendperiod, % Don't add a period at the end of a chapter number
 % References will then be sorted and formatted in the correct style.
 %
  %\bibliographystyle{alpha}
-\bibliographystyle{iubh}
-\bibliography{biblio}
+%\bibliographystyle{iubh}
+%\bibliography{biblio}
 
 %\printbibliography[heading=none]
+\printbibliography
 
 %\include{041-Annexes}
 %\include{042-Glossary}
